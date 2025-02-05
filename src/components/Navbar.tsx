@@ -25,7 +25,9 @@ const Navbar: React.FC = () => {
 
   const navItems = [
     {name: 'Home', action: () => handleNavigation('/')},
-    {name: 'Products', action: () => handleNavigation('/products', 'featured-products')},
+    {name: 'About Us', action: () => handleNavigation('/')},
+    {name: 'Our Products', action: () => handleNavigation('/products', 'featured-products')},
+    {name: 'Conatact Us', action: () => handleNavigation('/')},
   ]
 
   const handleMobileNavClick = (action: () => void) => {
@@ -54,7 +56,7 @@ const Navbar: React.FC = () => {
             to='/'
             className='text-2xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors'
           >
-            Unagar
+            <img className='w-[150px] h-[150px]' src='../public/logos/logo2.png' />
           </Link>
           {/* Desktop Navigation */}
           <div className='hidden md:flex items-center space-x-6'>
