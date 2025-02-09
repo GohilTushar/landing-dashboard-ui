@@ -49,14 +49,13 @@ const Navbar: React.FC = () => {
     ))
 
   return (
-    <nav className='fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-md'>
-      <div className='container mx-auto px-4'>
-        <div className='flex justify-between items-center py-4'>
+    <nav className='fixed top-0 left-0 right-0 z-10 bg-white dark:bg-gray-800 shadow-md'>
+        <div className='flex h-10 my-2 justify-between mx-3 items-center'>
           <Link
             to='/'
             className='text-2xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors'
           >
-            <img className='w-[150px] h-[150px]' src='../public/logos/logo2.png' />
+            <img className='w-[150px]' src={theme === 'dark' ? '/logos/logo_dark_mode.png' : '/logos/logo_light_mode.png'} />
           </Link>
           {/* Desktop Navigation */}
           <div className='hidden md:flex items-center space-x-6'>
@@ -84,7 +83,6 @@ const Navbar: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (

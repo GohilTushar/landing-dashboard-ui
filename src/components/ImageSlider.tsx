@@ -3,12 +3,12 @@ import {useEffect, useState} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
 
 const images = [
-  '../public/image/20241212_113155.jpg',
-  '../public/image/IMG20240516111828.jpg',
-  '../public/image/20240709_151002.jpg',
-  '../public/image/436919668.jpg',
-  '../public/image/20240717_163607.jpg',
-  '../public/image/20240717_163917.jpg',
+  'image/20241212_113155.jpg',
+  'image/IMG20240516111828.jpg',
+  'image/20240709_151002.jpg',
+  'image/436919668.jpg',
+  'image/20240717_163607.jpg',
+  'image/20240717_163917.jpg',
 ]
 
 const ImageSlider: React.FC = () => {
@@ -21,7 +21,7 @@ const ImageSlider: React.FC = () => {
     }, intervalTime)
 
     return () => clearInterval(interval)
-  }, [images.length])
+  }, [])
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index)
@@ -49,23 +49,17 @@ const ImageSlider: React.FC = () => {
           transition={{duration: 0.5}}
         />
       </AnimatePresence>
-      <div className='absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center'>
-        <h2 className='text-white text-4xl font-bold text-center px-4'>
-          {/* {images[currentIndex].text} */}
-          Hello
-        </h2>
-      </div>
       <button
-        className='absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 text-black p-2 rounded-full'
+        className='absolute top-1/2 left-4 transform bg-white bg-opacity-50 hover:bg-opacity-75 text-black p-2 rounded-full'
         onClick={goToPrevSlide}
       >
-        &#10094;
+        &#8249;
       </button>
       <button
-        className='absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 text-black p-2 rounded-full'
+        className='absolute top-1/2 right-4 transform bg-white bg-opacity-50 hover:bg-opacity-75 text-black p-2 rounded-full'
         onClick={goToNextSlide}
       >
-        &#10095;
+        &#8250;
       </button>
       <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2'>
         {images.map((_, index) => (

@@ -16,7 +16,7 @@ const Products: React.FC = () => {
       transition={{duration: 0.5}}
       className='container mx-auto px-4 py-8'
     >
-      <h1 className='text-4xl font-bold mb-6 text-gray-800 dark:text-gray-200'>Our Products</h1>
+      <h1 className='text-4xl mt-16 font-bold mb-6 text-gray-800 dark:text-gray-200'>Our Products</h1>
       <ViewToggle view={view} setView={setView} />
       <div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-3 gap-6' : 'space-y-6'}>
         {products.map((product) => (
